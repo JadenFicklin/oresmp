@@ -93,7 +93,6 @@ function Landing() {
                         SMP!
                     </div>
                 </div>
-                {/* test */}
                 <div className="grid h-full grid-cols-2 grid-rows-1 gap-10 md:grid-cols-1 md:grid-rows-2 col-span-full md:col-span-3">
                     <div className="col-span-1 bg-[#381862]  rounded-[9px] opacity-[88%] max-h-[280px]"></div>
                     <div className="col-span-1 bg-[#381862]  rounded-[9px] opacity-[88%] max-h-[280px]"></div>
