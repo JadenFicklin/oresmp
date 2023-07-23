@@ -13,7 +13,15 @@ function App() {
         <Router>
             <Nav />
             <div className="w-full h-screen fixed left-0 top-0 -z-10">
+                {/* bg-[#361b4e] */}
                 <div className="absolute left-0 top-0 bg-black h-full opacity-50 w-full"></div>
+                <div
+                    className="absolute left-0 bottom-0 h-[60%] w-full"
+                    style={{
+                        background:
+                            'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)'
+                    }}></div>
+
                 <img
                     src={background}
                     alt="minecraft-village"

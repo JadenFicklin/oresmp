@@ -2,9 +2,14 @@ import { Link } from 'react-router-dom';
 import key from '../assets/key.png';
 import { BsDiscord } from 'react-icons/bs';
 import { useState } from 'react';
+import c from 'classnames';
 
 function Nav() {
     const [menu, setMenu] = useState(false);
+    const [home, setHome] = useState(false);
+    const [forums, setForums] = useState(false);
+    const [staff, setStaff] = useState(false);
+    const [rules, setRules] = useState(false);
 
     return (
         <div>
@@ -31,31 +36,59 @@ function Nav() {
                     </div>
                 </div>
             </div>
-            <div className="hidden md:block text-[23px] w-10/12 mx-auto text-white  mt-6">
+            <div className="hidden md:block text-[23px] w-10/12 mx-auto text-white  mt-10">
                 <div className="flex">
-                    <Link
-                        className="mr-10 hover:border-b-4 pb-2 border-white"
-                        to="/">
-                        Home
+                    <Link className="mr-10" to="/">
+                        <p
+                            onMouseEnter={() => setHome(true)}
+                            onMouseLeave={() => setHome(false)}>
+                            Home
+                            <div
+                                className={c(
+                                    'mt-1 w-0 h-[3px] bg-white duration-300',
+                                    home && 'w-full'
+                                )}></div>
+                        </p>
                     </Link>
-                    <Link
-                        className="mr-10 hover:border-b-4 pb-2 border-white"
-                        to="/forums">
-                        Forums
+                    <Link className="mr-10" to="/forums">
+                        <p
+                            onMouseEnter={() => setForums(true)}
+                            onMouseLeave={() => setForums(false)}>
+                            Forums
+                            <div
+                                className={c(
+                                    'mt-1 w-0 h-[3px] bg-white duration-300',
+                                    forums && 'w-full'
+                                )}></div>
+                        </p>
                     </Link>
-                    <Link
-                        className="mr-10 hover:border-b-4 pb-2 border-white"
-                        to="/staff">
-                        Staff
+                    <Link className="mr-10" to="/staff">
+                        <p
+                            onMouseEnter={() => setStaff(true)}
+                            onMouseLeave={() => setStaff(false)}>
+                            Staff
+                            <div
+                                className={c(
+                                    'mt-1 w-0 h-[3px] bg-white duration-300',
+                                    staff && 'w-full'
+                                )}></div>
+                        </p>
                     </Link>
-                    <Link
-                        className="mr-10 hover:border-b-4 pb-2 border-white"
-                        to="/rules">
-                        Rules
+                    <Link className="mr-10" to="/rules">
+                        <p
+                            onMouseEnter={() => setRules(true)}
+                            onMouseLeave={() => setRules(false)}>
+                            Rules
+                            <div
+                                className={c(
+                                    'mt-1 w-0 h-[3px] bg-white duration-300',
+                                    rules && 'w-full'
+                                )}></div>
+                        </p>
                     </Link>
                 </div>
             </div>
-            <div className="md:hidden w-[137px] h-[64px] text-white bg-[#d73ee8] flex items-center rounded-[10px] border-t-4 border-[#EC6BFB] cursor-pointer hover:-mt-1 duration-150">
+            <div className="md:hidden w-[137px] h-[64px] text-white bg-[#d73ee8] flex items-center rounded-[10px] border-t-4 border-[#EC6BFB] cursor-pointer hover:-mt-1 duration-150 mt-3 -mb-3 ml-9">
                 <div
                     className="w-10/12 grid grid-cols-2 h-4/6 "
                     onClick={() => setMenu(true)}>
