@@ -12,7 +12,7 @@ import clock from '../assets/clock.png';
 function Landing() {
     return (
         <>
-            <div className="w-full h-[320px] mt-16 flex justify-center relative scale-[.6] sm:scale-75 md:scale-100">
+            <div className="w-full h-[320px] mt-44 flex justify-center relative scale-[.6] sm:scale-75 md:scale-100">
                 <div
                     style={{ backgroundImage: `url(${logo})` }}
                     className="w-[420px] h-[320px] z-20"></div>
@@ -33,7 +33,7 @@ function Landing() {
                 />
                 <img
                     src={axe}
-                    alt="shovel"
+                    alt="axe"
                     className="w-[156px] h-[156px] absolute bottom-0 rotate-[0deg] -mr-[390px] mb-[100px]"
                 />
             </div>
@@ -52,14 +52,14 @@ function Landing() {
                     Welcome to the ORE SMP Community
                 </p>
             </div>
-            <div className="w-10/12 mx-auto h-min mt-[40px] grid grid-cols-1 md:grid-cols-12 gap-[40px] grid-rows-2 md:grid-rows-1 mb-32">
-                <div className="col-span-full md:col-span-9 h-full bg-[#381862]  rounded-[9px] opacity-[88%]">
+            <div className="w-10/12 mx-auto h-min mt-[40px] grid grid-cols-1 lg:grid-cols-12 gap-[40px] grid-rows-2 lg:grid-rows-1 mb-32">
+                <div className="col-span-full lg:col-span-9 h-full bg-[#381862]  rounded-[9px] opacity-[88%]">
                     <div className="w-full h-[175px] relative">
                         <p className="text-white md:text-[25px] text-[20px] p-6 pl-12">
                             Welcome to the Ore smp Website!
                         </p>
                         <div className="flex flex-wrap ml-12">
-                            <img src={timbo} alt="timbo's profile picture" />
+                            <img src={timbo} alt="Timbo profile" />
                             <p className=" w-[200px] h-[30px] flex flex-wrap mt-2 ml-4 text-[#C39CE2]">
                                 Tiptow |{' '}
                                 <span>
@@ -92,9 +92,29 @@ function Landing() {
                         check out Ore SMP!
                     </div>
                 </div>
-                <div className="grid h-full grid-cols-2 grid-rows-1 gap-10 md:grid-cols-1 md:grid-rows-2 col-span-full md:col-span-3">
-                    <div className="col-span-1 bg-[#381862]  rounded-[9px] opacity-[88%] max-h-[280px]"></div>
-                    <div className="col-span-1 bg-[#381862]  rounded-[9px] opacity-[88%] max-h-[280px]"></div>
+                <div className="grid h-full grid-cols-2 grid-rows-1 gap-10 lg:grid-cols-1 lg:grid-rows-3 col-span-full lg:col-span-3">
+                    <div className="col-span-1 bg-[#381862]  rounded-[9px] opacity-[88%] max-h-[167px] grid place-content-center">
+                        <div className="w-[100%] h-[112px] ">
+                            <div className="text-center text-[#ffd798] text-[21px]">
+                                Server release <br /> countdown
+                            </div>
+                            <div className="w-full bg-white h-[1px] my-2 opacity-[17%]"></div>
+                            <div className="text-[18px] lg:text-[23px] text-white text-center">
+                                09 : 12 : 32 : 06
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-span-1 bg-[#381862] max-h-[360px] rounded-[9px] opacity-[88%] lg:row-span-2 h-min overflow-auto">
+                        <div className="p-7">
+                            <p className="text-[#FFD798] text-[21px]">
+                                Members online
+                            </p>
+                            <p className="text-[#c39ce2] text-[19px] mt-3">
+                                Jorrsk, Elysian, Ballnx, theeonlyogea,
+                                ItsJusticeH, Jess, davy101
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
