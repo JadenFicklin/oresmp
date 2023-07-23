@@ -80,17 +80,16 @@ function Landing() {
                         </div>
                     </div>
                     <img src={gradient} alt="gradient" className="w-full" />
-                    <div className="w-full h-min text-[#C39CE2] px-12 md:text-[23px] text-[18px] xl:-mt-14 xl:mb-14 mt-0 mb-20">
-                        Welcome to Ore SMP! <br></br> <br></br> This is a
-                        content creator /personality server! We hope that each
-                        of our members are active and make regular uploads!{' '}
-                        <br></br> <br></br>Ok, but what's the twist?? This
-                        server adds several new ores!! Each adds new weapons and
-                        tools that have special abilities. Like swords that give
-                        permanent effects to the player you kill with them! Or
-                        an axe that breaks down a whole tree with one hit!{' '}
-                        <br></br> <br></br>Glad you stopped by to check out Ore
-                        SMP!
+                    <div className="w-full h-min text-[#C39CE2] px-12 md:text-[23px] text-[18px] xl:-mt-16 xl:mb-16 mt-0 mb-20">
+                        This is a content creator /personality server! We hope
+                        that each of our members are active and make regular
+                        uploads! <br></br> <br></br>Ok, but what's the twist??
+                        This server adds several new ores!! Each adds new
+                        weapons and tools that have special abilities. Like
+                        swords that give permanent effects to the player you
+                        kill with them! Or an axe that breaks down a whole tree
+                        with one hit! <br></br> <br></br>Glad you stopped by to
+                        check out Ore SMP!
                     </div>
                 </div>
                 <div className="grid h-full grid-cols-2 grid-rows-1 gap-10 md:grid-cols-1 md:grid-rows-2 col-span-full md:col-span-3">

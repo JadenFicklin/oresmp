@@ -12,9 +12,9 @@ function Nav() {
     const [rules, setRules] = useState(false);
 
     return (
-        <div>
-            <div className="w-full h-[56px] bg-black opacity-90 border-b-[2px] border-white">
-                <div className=" w-10/12  h-full mx-auto relative">
+        <div className="relative z-30">
+            <div className="w-full h-[56px] bg-black opacity-90 border-b-[2px] border-white fixed top-0">
+                <div className="relative w-10/12 h-full mx-auto ">
                     <div className=" w-[200px] md:w-[400px]  h-full absolute left-0 text-[#FFD798] grid grid-cols-5 content-center">
                         <p>
                             <p className="hidden md:block ">Discord</p>{' '}
@@ -36,7 +36,7 @@ function Nav() {
                     </div>
                 </div>
             </div>
-            <div className="hidden md:block text-[23px] w-10/12 mx-auto text-white  mt-10">
+            <div className="hidden md:block text-[23px] w-10/12 mx-auto text-white fixed top-20 left-40">
                 <div className="flex">
                     <Link className="mr-10" to="/">
                         <p
@@ -90,9 +90,9 @@ function Nav() {
             </div>
             <div className="md:hidden w-[137px] h-[64px] text-white bg-[#d73ee8] flex items-center rounded-[10px] border-t-4 border-[#EC6BFB] cursor-pointer hover:-mt-1 duration-150 mt-3 -mb-3 ml-9">
                 <div
-                    className="w-10/12 grid grid-cols-2 h-4/6 "
+                    className="grid w-10/12 grid-cols-2 h-4/6 "
                     onClick={() => setMenu(true)}>
-                    <div className="w-full h-full grid place-content-center">
+                    <div className="grid w-full h-full place-content-center">
                         <div className="flex flex-col place-content-between w-[30px] h-[20px]">
                             <div className="w-full h-[3px] bg-white"></div>
                             <div className="w-full h-[3px] bg-white"></div>
