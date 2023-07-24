@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import key from '../assets/key.png';
-import { BsDiscord } from 'react-icons/bs';
 import { useState } from 'react';
 import c from 'classnames';
 
@@ -17,11 +16,7 @@ function Nav() {
                 <div className="w-full h-[56px] bg-black opacity-90 border-b-[2px] border-white fixed top-0">
                     <div className="relative w-10/12 h-full mx-auto ">
                         <div className=" w-[200px] md:w-[400px]  h-full absolute left-0 text-[#FFD798] grid grid-cols-5 content-center">
-                            <p>
-                                <p className="hidden md:block ">Discord</p>{' '}
-                                <BsDiscord className="md:hidden mt-[3px]" />
-                            </p>
-                            <p className=" col-span-4 md:col-span-3 text-[12px] md:text-[18px]">
+                            <p className=" col-span-4 md:col-span-3 text-[12px] md:text-[18px] cursor-pointer">
                                 IP: play.oresmp.net
                             </p>
                         </div>
