@@ -16,7 +16,7 @@ function Nav() {
     return (
         <>
             {loginClicked && (
-                <div className="absolute z-40 top-12 right-32">
+                <div className="absolute z-[60] top-12 right-32">
                     <LoginSignup />
                 </div>
             )}
@@ -26,9 +26,11 @@ function Nav() {
                         <div className=" w-[200px] md:w-[400px]  h-full absolute left-0 text-[#FFD798] grid grid-cols-5 content-center">
                             <p className=" col-span-4 md:col-span-3 text-[12px] md:text-[18px] cursor-pointer">
                                 IP: play.oresmp.net{' '}
-                                <p className="hidden lg:block absolute top-[13px] left-[300px] w-max ">
-                                    Welcome {user?.displayName}!
-                                </p>
+                                {user && (
+                                    <p className="hidden lg:block absolute top-[13px] left-[300px] w-max cursor-default">
+                                        Logged in as {user?.displayName}
+                                    </p>
+                                )}
                             </p>
                         </div>
                         <div

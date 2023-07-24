@@ -40,24 +40,23 @@ function LoginSignup() {
 
     return (
         <div>
-            {/* {!user && ( */}
-            <button
-                onClick={handleSignIn}
-                className="flex p-3 duration-300 bg-white rounded-md hover:bg-gray-300 group border-2 w-[300px] mx-auto">
-                <FcGoogle className="w-[24px] h-[24px]" />
-                <p className="mx-6 font-semibold text-gray-500 ">
-                    Continue with Google
-                </p>
-            </button>
-            {/* // )} */}
-            {/* {user && ( */}
-            <button
-                className="bg-gray-600 text-white px-3 rounded-[4px]  hover:bg-[#3788D8]"
-                onClick={handleSignOut}>
-                Log out
-            </button>
-            {/* )} */}
-            <p className="absolute">{JSON.stringify(user)}</p>
+            {!user && (
+                <button
+                    onClick={handleSignIn}
+                    className="flex p-3 duration-300 bg-white rounded-md hover:bg-gray-300 group border-2 w-[300px] mx-auto fixed top-[2px] right-[340px] scale-75">
+                    <FcGoogle className="w-[24px] h-[24px]" />
+                    <p className="mx-6 font-semibold text-gray-500 ">
+                        Continue with Google
+                    </p>
+                </button>
+            )}
+            {user && (
+                <button
+                    className="bg-gray-600 text-white px-3 rounded-[4px]  hover:bg-[#3788D8] fixed  top-4 right-[380px] w-[100px]"
+                    onClick={handleSignOut}>
+                    Log out
+                </button>
+            )}
         </div>
     );
 }
