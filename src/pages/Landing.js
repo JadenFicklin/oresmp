@@ -8,6 +8,7 @@ import torch from '../assets/torch.png';
 import gradient from '../assets/gradient.png';
 import timbo from '../assets/timbo.png';
 import clock from '../assets/clock.png';
+import Countdown from '../components/Countdown';
 
 function Landing() {
     return (
@@ -106,7 +107,7 @@ function Landing() {
                             </div>
                             <div className="w-full bg-white h-[1px] my-2 opacity-[17%]"></div>
                             <div className="text-[18px] lg:text-[23px] text-white text-center">
-                                09 : 12 : 32 : 06
+                                <Countdown />
                             </div>
                         </div>
                     </div>
