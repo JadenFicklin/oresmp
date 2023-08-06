@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import key from '../assets/key.png';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import c from 'classnames';
 import LoginSignup from './LoginSignup';
 import { UserContext } from './UserContext';
@@ -12,7 +12,21 @@ function Nav() {
     const [staff, setStaff] = useState(false);
     const [rules, setRules] = useState(false);
     const [loginClicked, setLoginClicked] = useState(false);
+    const [copyClick, setCopyClick] = useState(false);
+    const [textToCopy] = useState('play.oresmp.net');
+
     const { user, userUid } = useContext(UserContext);
+
+    useEffect(() => {
+        if (copyClick) {
+            const timeoutId = setTimeout(() => {
+                setCopyClick(false);
+            }, 3000); // 3 seconds timeout
+
+            return () => clearTimeout(timeoutId);
+        }
+    }, [copyClick]);
+
     return (
         <>
             {loginClicked && (
@@ -24,8 +38,18 @@ function Nav() {
                 <div className="w-full h-[56px] bg-black opacity-90 border-b-[2px] border-white fixed top-0">
                     <div className="relative w-10/12 h-full mx-auto ">
                         <div className=" w-[200px] md:w-[400px]  h-full absolute left-0 text-[#FFD798] grid grid-cols-5 content-center">
-                            <p className=" col-span-4 md:col-span-3 text-[12px] md:text-[18px] cursor-pointer">
+                            <p
+                                className=" col-span-4 md:col-span-3 text-[12px] md:text-[18px] cursor-pointer"
+                                onClick={() => {
+                                    navigator.clipboard.writeText(textToCopy);
+                                    setCopyClick(true);
+                                }}>
                                 IP: play.oresmp.net{' '}
+                                {copyClick && (
+                                    <p className="absolute top-[15px] left-36 text-white scale-75">
+                                        Copied to clipboard!{' '}
+                                    </p>
+                                )}
                                 {user && (
                                     <p className="hidden lg:block absolute top-[13px] left-[300px] w-max cursor-default">
                                         Logged in as {user?.displayName}
