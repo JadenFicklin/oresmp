@@ -14,8 +14,14 @@ function Landing() {
         <>
             <div className="w-full h-[320px] mt-44 flex justify-center relative scale-[.6] sm:scale-75 md:scale-100">
                 <div
-                    style={{ backgroundImage: `url(${logo})` }}
-                    className="w-[420px] h-[320px] z-20"></div>
+                    style={{
+                        backgroundImage: `url(${logo})`,
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center'
+                    }}
+                    className="w-[320px] h-[240px] mt-3 z-20"></div>
+
                 <img
                     src={sword}
                     alt="sword"
